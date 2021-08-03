@@ -5,10 +5,23 @@ let heads = [];
 let headers = [];
 let book = {};
 
+function showSpinner() {
+    document.getElementById("books-loader").style.display = 'block';
+  }
+  
+  function hideSpinner() {
+    document.getElementById("books-loader").style.display = 'none';
+  }
+
+
 document.addEventListener('DOMContentLoaded', function () {
-    // alert('page load complete');
-    table = document.createElement('table');
-    intializeTable(dataPath)
+    showSpinner();
+    setTimeout(()=> {
+        table = document.createElement('table');
+        intializeTable(dataPath);
+        hideSpinner()
+    }, 1000);
+
 }, false);
 
 const form = document.getElementById('bookForm');
@@ -54,9 +67,14 @@ const verifyCreatingBook = (book) => {
 
 const submitBook = () => {
     console.log('pushing to data table', book);
-    pushToBooks(book);
-    resetForm();
-    hideModal();
+    showSpinner();
+    setTimeout(()=> {
+        pushToBooks(book);
+        hideSpinner()
+        resetForm();
+        hideModal();
+    }, 1000);
+
 }
 
 const cancelSubmitBook = () => {
