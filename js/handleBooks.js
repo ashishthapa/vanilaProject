@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     intializeTable(dataPath)
 }, false);
 
-const form  = document.getElementById('bookForm');
+const form = document.getElementById('bookForm');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -48,21 +48,21 @@ const resetForm = () => {
     document.getElementById('bookForm').reset();
     book = {}
 }
- const verifyCreatingBook = (book) => {
+const verifyCreatingBook = (book) => {
     showModal(book);
- } 
+}
 
- const submitBook = ()=> {
-     console.log('pushing to data table', book);
+const submitBook = () => {
+    console.log('pushing to data table', book);
     pushToBooks(book);
     resetForm();
     hideModal();
- }
+}
 
- const cancelSubmitBook = ()=> {
+const cancelSubmitBook = () => {
     hideModal();
- }
- 
+}
+
 
 const pushToBooks = (data) => {
     books.push(data);
@@ -89,7 +89,7 @@ const intializeTable = (dataPath) => {
             headers = getHeaders(books);
             createHeaders(headers);
             handleTableCreation(books);
-        }).catch((err)=> {
+        }).catch((err) => {
             console.log('Error occured', err);
         });
 }
@@ -113,11 +113,11 @@ const createTable = (headers, books) => {
     // })
     console.log('heads', heads);
     console.log('heads', books);
-    if(heads) {
+    if (heads) {
         for (var i = 0; i < books.length; i++) {
 
             tr = table.insertRow(-1);
-    
+
             for (var j = 0; j < headers.length; j++) {
                 var tabCell = tr.insertCell(-1);
                 tabCell.innerHTML = books[i][headers[j]];

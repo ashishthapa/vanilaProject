@@ -9,11 +9,11 @@ function hideModal() {
 
 function showModal(event) {
     console.log(event);
-    let bookString = '<p> Title : ' +event['Title']+'</p>'+
-                     '<p> Published : ' +event['Published']+'</p>'+
-                     '<p> Author :' +event['Author']+'</p>'+
-                     '<p> Version : ' +event['Version']+'</p>'+
-                     '<p> Comments : ' +event['Version']+'</p>'
+    let bookString = '<p> Title : ' + event['Title'] + '</p>' +
+        '<p> Published : ' + event['Published'] + '</p>' +
+        '<p> Author :' + event['Author'] + '</p>' +
+        '<p> Version : ' + event['Version'] + '</p>' +
+        '<p> Comments : ' + event['Version'] + '</p>'
     var modalBody = document.querySelector(".modal-book-display");
     console.log(bookString);
     modalBody.innerHTML = bookString;
