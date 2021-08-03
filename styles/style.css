@@ -139,16 +139,31 @@ td, th {
   background: #F6DDCE;
   margin-bottom: 1em;
   padding: 10px;
+  margin-top: 50px;
+  margin-left: 7%;
+  margin-right: 7%;
+  border-radius: 1%;
+  padding: 10px;
 }
 
 .form-group ul {
   list-style: none;
   margin: 0 0 2em;
-  padding: 0;
+  padding: 3em;
 }
 
 .form-group li {
   margin-bottom: 0.5em;
+}
+
+.form-button {
+  margin: 10px;
+  padding: 10px;
+  height: 40px;
+  width: 80px;
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 /*
