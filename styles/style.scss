@@ -109,6 +109,26 @@
 	}
 
   }
+  @media all and (max-width: 340px) {
+	.form-group {
+	  margin-left: 20%;
+	  margin-right: -20%;
+	}
+}
+
+  @media all and (max-width: 375px) {
+	  .form-group {
+		margin-left: 20%;
+		margin-right: -40%;
+	  }
+  }
+
+  @media all and (max-width: 425px) {
+	.form-group {
+	  margin-left: 20%;
+	  margin-right: -10%;
+	}
+}
 
   
 
