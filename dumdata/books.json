@@ -1,0 +1,30 @@
+[
+        {
+            "Title":"Eloquent JavaScript, Third Edition",
+            "Published":"2018-12-04",
+            "Version":"01",
+            "Author":"Marijn Haverbeke",
+            "Comments": "Nice"    
+        },
+        {
+            "Title":"Practical Modern JavaScript",
+            "Published":"2017-07-16",
+            "Author":"Nicolás Bevacqua",
+            "Version":"05",
+            "Comments":"Good for Intermediate developers"
+        },
+        {
+            "Title":"Understanding ECMAScript 6",
+            "Published":"2016-09-03",
+            "Author":"Nicholas C. Zakas",
+            "Version":"3rd",
+            "Comments":"Handy for those learning latest version of JavaScript"
+        },
+        {
+            "Title":"You Don't Know JS Yet",
+            "Published":"2020-01-28",
+            "Author":"Kyle Simpson",
+            "Version":"3rd",
+            "Comments": "Gotchas in JS"    
+        }
+    ]

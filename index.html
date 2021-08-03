@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Zutec | Construction and Asset Lifecycle Management Software</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid">
+      <section class="logoSection">
+        <a href="/" class="logo"><img width="190" alt="logo"
+            src="https://www.zutec.com/wp-content/uploads/2021/02/logo.png"></a>
+      </section>
+      <section class="navSection">
+        <nav>
+          <ul class="nav-links">
+            <li class="navList"><a href="#">Dashboard</a></li>
+            <li class="navList"><a href="#">Projects</a></li>
+            <li class="navList"><a href="#">Admin</a></li>
+            <li class="navList"><a href="#">Drawings</a></li>
+            <li class="navList"><a href="#">BIM</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="demoLoginSection">
+        <button class="btn demobtn">Book a Demo</button>
+        <!-- <a href="https://www.zutec.com/book-a-demo/" class="btn demobtn">
+                <img width="12px"> Book a Demo</a> -->
+        <!-- <a href="https://global.zutec.com/login/global_login.php" class="btn loginbtn">
+                <img  width="12px" src="https://www.zutec.com/wp-content/themes/zutec/img/padlock.png"> Login                                    
+              </a> -->
+        <button class="btn loginbtn"> <i class="fa fas fa-lock"></i> Login</button>
+      </section>
+      <button class="burger">
+        <svg class="burger-open" width="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.22 100.22">
+          <path stroke="#004A74" stroke-width="0" fill="#004A74"
+            d="M142.552 88.615H60.677a4.563 4.563 0 01-4.562-4.563V79.49a4.563 4.563 0 014.562-4.563h81.875a4.563 4.563 0 014.563 4.563v4.562a4.563 4.563 0 01-4.563 4.563zm-.031-34.125H32.646a4.562 4.562 0 01-4.562-4.563v-4.562a4.562 4.562 0 014.562-4.563h109.875a4.563 4.563 0 014.563 4.563v4.562a4.563 4.563 0 01-4.563 4.563zm-.25-34.125H10.396a4.562 4.562 0 01-4.562-4.563V11.24a4.562 4.562 0 014.562-4.563h131.875a4.563 4.563 0 014.563 4.563v4.562a4.563 4.563 0 01-4.563 4.563z">
+          </path>
+        </svg>
+
+        <svg class="burger-close" width="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.22 125.22">
+          <path stroke="#004A74" stroke-width="0" fill="#004A74"
+            d="M111.399 17.797L69.35 59.859l41.448 41.448a4.562 4.562 0 010 6.452l-3.226 3.226a4.563 4.563 0 01-6.453 0L59.673 69.539 17.794 111.43a4.56 4.56 0 01-6.451 0l-3.262-3.263a4.565 4.565 0 010-6.453l41.877-41.89L7.87 17.736a4.563 4.563 0 010-6.453l3.226-3.226a4.562 4.562 0 016.452 0l42.087 42.087 42.051-42.062a4.56 4.56 0 016.451 0l3.262 3.262a4.565 4.565 0 010 6.453z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <section>
+    <section id="datatable">
+    </section>
+  </section>
+
+  <section class="confirmBookCreationModal">
+      <div id="myModal" class="modal">
+      <div class="modal-header modal-items">
+        <h3>Warning.. Would you want to create book with following properties</h2>
+      </div>
+      <!-- Modal content -->
+      <div class="modal-content modal-items modal-book-display">
+      </div>
+      <div class="modal-footer">
+        <section class="modal-buttons">
+          <button class="button submitbook" onclick="submitBook()">Submit</button>
+          <button class="button cancelbook" onclick="cancelSubmitBook()">Cancel</button>
+        </section>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="form-group">
+    <form id="bookForm">
+      <ul class="form-fields">
+        <li><label for="name">Title:</label> <input type="text" name="title" id="title" placeholder="Book title"
+            required pattern="([A-z0-9À-ž\s]){1,18}" class="text-input"></li>
+        <li><label for="date-published">Date published:</label> <input type="date" name="date-published" required
+            pattern="([A-zÀ-ž\s]){2,18}" id="date-published" placeholder="Published Date" class="text-input"></li>
+        <li><label for="author">Author:</label> <input type="text" name="author" id="Author" required
+            placeholder="author" class="text-input"></li>
+        <li><label for="version">Version:</label> <input type="text" name="version" id="version" placeholder="Version"
+            required pattern="([A-z0-9À-ž\s]){1,6}" class="text-input"></li>
+        <li><label for="comments">Comments:</label> <input type="text" name="comments" id="comments"
+            placeholder="Comments" required pattern="([A-z0-9À-ž\s]){1,20}" class="text-input"></li>
+      </ul>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <script type="text/javascript" src="js/mobileNavbar.js"></script>
+  <script type="text/javascript" src="js/handleBooks.js"></script>
+  <script type="text/javascript" src="js/handleModals.js"></script>
+</body>
+
+</html>

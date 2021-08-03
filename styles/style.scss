@@ -1,0 +1,289 @@
+*{
+	box-sizing: border-box;
+  }
+  
+  .genericButton {
+	border-radius: 19px;
+	text-transform: uppercase;
+	font-size: 12px;
+	border: 2px solid #ff9000;
+	display: inline-flex;
+	color: #ff9000;
+	justify-content: center;
+	padding: 7px 25px;
+	align-items: center;
+	min-height: 18px;
+  }
+
+  .demobtn {
+	// border-radius: 19px;
+	// text-transform: uppercase;
+	// font-size: 12px;
+	// border: 2px solid #ff9000;
+	// display: inline-flex;
+	// color: #ff9000;
+	// justify-content: center;
+	// padding: 7px 25px;
+	// align-items: center;
+	// text-decoration: none;
+	// min-height: 18px;
+	@extend .genericButton;
+		height: 36px;
+		background: #ff9000;
+		color:#fff;
+  }
+
+  .loginbtn {
+	@extend .genericButton;
+	// border-radius: 19px;
+    // text-transform: uppercase;
+    // font-size: 12px;
+    // border: 2px solid #ff9000;
+    // display: inline-flex;
+    // color: #ff9000;
+    // justify-content: center;
+    // padding: 7px 25px;
+    // align-items: center;
+	// min-height: 36px;
+	// height: 36px;
+	background-color: #fff;
+  }
+
+  i {
+	  margin-right: 5px;
+  }
+  
+  header div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 20px;
+	section {
+		.logoSection {
+			flex: 1 0 0;
+		}
+		.navSection{
+			flex: 2 0 600px;
+		}
+		.demoLoginSection {
+			flex: 1 0 0;
+		}
+	} 
+
+  }
+
+  
+  .nav-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between!important;
+	list-style: none;
+	li {
+		a {
+			font-size: 18px;
+			text-decoration: none;
+			color: #333333;
+			line-height: 20px;
+			display: inline-block;
+			padding: 10px 15px;
+		}
+	}
+  }
+  
+  .container-fluid {
+	padding-left: 15px;
+	padding-right: 15px;
+  }
+  
+  .burger {
+	display: none;
+  }
+  
+  @media all and (max-width: 768px) {
+	.burger {
+	  display: inline-block;
+	  flex: 0 0 90px;
+	  max-width: 68px;
+	}
+	.navSection, .demoLoginSection {
+		display: none;
+	}
+	section {
+		.logoSection {
+			flex: 0 0 60px;
+			width: 120px;
+		}
+	}
+	.nav-links li {
+		flex: 1 0 768px;
+		a {
+			font-size: 48px;
+			text-decoration: none;
+			color: #333333;
+			line-height: 60px;
+			display: inline-block;
+			padding-left: 30%;
+			padding-top: 18px;
+			text-align: center;
+		}
+	}
+
+  }
+
+  /*
+ 	* Table Styles 
+  */
+
+  table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+  td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+  }
+  
+
+  /*
+  	* Forms flex
+  */
+  .form-fields li {
+	display: flex;
+	flex-wrap: wrap;
+}
+.form-fields input[type="text"],
+.form-fields input[type="date"],
+.form-fields select {
+	flex: 1 0 230px;
+}
+.form-fields label {
+	flex: 1 0 90px;
+	max-width: 200px;
+}
+.form-group {
+	background: #F6DDCE;
+	margin-bottom: 1em;
+	padding: 10px;
+}
+.form-group ul {
+	list-style: none;
+	margin: 0 0 2em;
+	padding: 0;
+}
+.form-group li {
+	margin-bottom: 0.5em;
+}
+  
+/*
+* Styles for Modal
+*/
+.modal {
+	border-radius: 1px red bold;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.9;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-header {
+	background-color: #e7e7e7;
+	margin: auto;
+	padding: 20px;
+	border-top: 1px solid #888;
+	border-left: 1px solid #888;
+	border-right: 1px solid #888;
+	width: 80%;
+	margin-top: 20%;
+  }
+  .modal-footer {
+	background-color: #e7e7e7;
+	margin: auto;
+	padding: 20px;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	border-right: 1px solid #888;
+	width: 80%;
+  }
+  
+  
+  /* Modal Content */
+  .modal-content {
+	background-color: #e7e7e7;
+	margin: auto;
+	padding: 20px;
+	border-left: 1px solid #888;
+	border-right: 1px solid #888;
+	width: 80%;
+  }
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+.show-modal {
+    opacity: 0.9;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.hide-modal {
+    visibility: none;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.button {
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+  }
+  
+  .submitbook {
+	  background-color: #008CBA
+	} 
+  .cancelbook {
+	  background-color: #f44336
+	}  
+ 
+
+.modal-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	padding: 10px;
+  }
+
+  .modal-items {
+	text-align: center;
+  }
+
+  .modal-book-display {
+	  p {
+		  font-size: 18px;
+	  }
+  }
